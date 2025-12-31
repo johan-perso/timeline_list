@@ -115,7 +115,9 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    canvas.drawLine(top, iconOffset, linePaint);
+    if(!isFirst) {
+      canvas.drawLine(top, iconOffset, linePaint);
+    }
 
     // Draw a line from icon to end
     canvas.drawLine(iconOffset, end, linePaint);
@@ -141,7 +143,9 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    canvas.drawLine(top, iconOffset, linePaint);
+    if(!isFirst) {
+      canvas.drawLine(top, iconOffset, linePaint);
+    }
 
     // Draw a line from icon to end
     canvas.drawLine(iconOffset, end, linePaint);
@@ -167,7 +171,9 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    canvas.drawLine(top, iconOffset, linePaint);
+    if(!isFirst) {
+      canvas.drawLine(top, iconOffset, linePaint);
+    }
 
     // Draw a line from icon to end
     canvas.drawLine(iconOffset, end, linePaint);
