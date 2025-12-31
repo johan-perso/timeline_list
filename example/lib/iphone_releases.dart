@@ -214,6 +214,7 @@ class _IPhoneReleaseTimelinePageState extends State<IPhoneReleaseTimelinePage> {
         markerCount: doodles.length,
         maxWidth: 250,
         properties: TimelineProperties(
+            lineEndGap: 20,
             lineWidth: 3,
             timelinePosition: position,
             lineColor: Colors.deepPurple.shade700,

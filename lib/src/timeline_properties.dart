@@ -10,6 +10,7 @@ class TimelineProperties {
   final double iconSize; // icon is assumed to be square
   final MarkerIconAlignment iconAlignment;
   final TimelinePosition timelinePosition;
+  final double lineEndGap;
 
   /// A class that holds the properties for a timeline item.
   ///
@@ -46,5 +47,9 @@ class TimelineProperties {
     /// timeline is centered. Note that the timeline item position is
     /// ignored when timelinePosition is left or right.
     this.timelinePosition = TimelinePosition.center,
+
+    /// The gap at the end of each line segment (except the last one).
+    /// This creates visual separation between timeline segments.
+    this.lineEndGap = 0,
   }) : iconSize = iconSize ?? 2 * lineWidth;
 }

@@ -100,6 +100,7 @@ class _TimelineBoxPainter extends BoxPainter {
   void drawLineOnCenter(
       Canvas canvas, Offset offset, ImageConfiguration configuration) {
     final size = configuration.size!;
+    final linePadding = isLast ? 0.0 : properties.lineEndGap;
     // horizontal center
     Offset iconOffset = switch (iconAlignment) {
       MarkerIconAlignment.top =>
@@ -111,7 +112,7 @@ class _TimelineBoxPainter extends BoxPainter {
     Offset top = size.topCenter(offset -
         Offset(0, -properties.iconSize / 2 + properties.markerGap / 2));
     Offset end = size.bottomCenter(
-        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2));
+        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
     if (!isFirst) {
@@ -127,6 +128,7 @@ class _TimelineBoxPainter extends BoxPainter {
   void drawLineOnLeft(
       Canvas canvas, Offset offset, ImageConfiguration configuration) {
     final size = configuration.size!;
+    final linePadding = isLast ? 0.0 : properties.lineEndGap;
     // horizontal center
     offset = offset.translate(properties.iconSize / 2, 0);
     Offset iconOffset = switch (iconAlignment) {
@@ -139,7 +141,7 @@ class _TimelineBoxPainter extends BoxPainter {
     Offset top = size.topLeft(offset -
         Offset(0, -properties.iconSize / 2 + properties.markerGap / 2));
     Offset end = size.bottomLeft(
-        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2));
+        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
     if (!isFirst) {
@@ -155,6 +157,7 @@ class _TimelineBoxPainter extends BoxPainter {
   void drawLineOnRight(
       Canvas canvas, Offset offset, ImageConfiguration configuration) {
     final size = configuration.size!;
+    final linePadding = isLast ? 0.0 : properties.lineEndGap;
     // horizontal center
     offset = offset.translate(-properties.iconSize / 2, 0);
     Offset iconOffset = switch (iconAlignment) {
@@ -167,7 +170,7 @@ class _TimelineBoxPainter extends BoxPainter {
     Offset top = size.topRight(offset -
         Offset(0, -properties.iconSize / 2 + properties.markerGap / 2));
     Offset end = size.bottomRight(
-        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2));
+        offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
     if (!isFirst) {
