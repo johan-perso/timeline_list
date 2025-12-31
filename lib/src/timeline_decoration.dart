@@ -78,7 +78,7 @@ class _TimelineBoxPainter extends BoxPainter {
     required this.iconSize,
   }) : linePaint = Paint()
           ..color = properties.lineColor
-          ..strokeCap = StrokeCap.butt
+          ..strokeCap = StrokeCap.round
           ..strokeWidth = properties.lineWidth
           ..style = PaintingStyle.stroke;
 
@@ -115,13 +115,10 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    if (!isFirst) {
-      canvas.drawLine(top, iconOffset, linePaint);
-    }
+    canvas.drawLine(top, iconOffset, linePaint);
+
     // Draw a line from icon to end
-    if (!isLast) {
-      canvas.drawLine(iconOffset, end, linePaint);
-    }
+    canvas.drawLine(iconOffset, end, linePaint);
   }
 
   /// Draws the timeline line for left-positioned timelines.
@@ -144,13 +141,10 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    if (!isFirst) {
-      canvas.drawLine(top, iconOffset, linePaint);
-    }
+    canvas.drawLine(top, iconOffset, linePaint);
+
     // Draw a line from icon to end
-    if (!isLast) {
-      canvas.drawLine(iconOffset, end, linePaint);
-    }
+    canvas.drawLine(iconOffset, end, linePaint);
   }
 
   /// Draws the timeline line for right-positioned timelines.
@@ -173,12 +167,9 @@ class _TimelineBoxPainter extends BoxPainter {
         offset + Offset(0, properties.iconSize / 2 + properties.markerGap / 2 - linePadding));
 
     // Draw a line from top to icon
-    if (!isFirst) {
-      canvas.drawLine(top, iconOffset, linePaint);
-    }
+    canvas.drawLine(top, iconOffset, linePaint);
+
     // Draw a line from icon to end
-    if (!isLast) {
-      canvas.drawLine(iconOffset, end, linePaint);
-    }
+    canvas.drawLine(iconOffset, end, linePaint);
   }
 }
