@@ -26,6 +26,13 @@ dependencies:
   timeline_list: ^0.1.0
 ```
 
+## Enhancements
+
+This fork introduces the following enhancements:
+- A line is rendered even for the last timeline item to ensure visual consistency.
+- Rounded corners on timeline lines for a smoother appearance.
+- Visual gap between different timeline items with `lineEndGap` in `TimelineProperties`.
+
 ## Usage
 
 ### Simple Timeline
@@ -93,6 +100,7 @@ return Scaffold(
 - `lineColor`: Customizes the color of connecting lines
 - `itemGap`: Controls spacing between markers
 - `iconGap`: Sets gap between icon and marker content
+- `lineEndGap`: Sets the gap at the end of each line, except for the last
 
 ### Marker Properties
 
@@ -118,12 +126,3 @@ This repo is looking for maintainers. Contributions are welcome! Please feel fre
 - [@stijn1989](https://github.com/stijn1989)
 - [@JJCLane](https://github.com/JJCLane)
 - [@mjhansen3](https://github.com/mjhansen3)
-
----
-
-Sponsored by:
-<div style="text-align: center; background-color: #fff; padding: 20px">
-<a href="https://ehlibyte.com" target="_blank">
-    <img src="https://ehlibyte.com/images/ehlibyte-logo.svg?raw=true" alt="ehlibyte games" width="80" height="80" style="margin: 0 auto; display: block;">
-</a>
-</div>

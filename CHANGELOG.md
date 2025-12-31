@@ -1,3 +1,10 @@
+## [0.1.2] - FORK johan-perso - 2024-12-31
+
+### Improvements / Breaking Changes
+- A line is rendered even for the first and last timeline item to ensure visual consistency.
+- Rounded corners on timeline lines for a smoother appearance.
+- Visual gap between different timeline items with `lineEndGap` in `TimelineProperties`.
+
 ## [0.1.1] - 2024-12-02
 
 ### Improvements
