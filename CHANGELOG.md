@@ -1,9 +1,10 @@
-## [0.1.2] - FORK johan-perso - 2024-12-31
+## [0.1.2] - FORK johan-perso - 2025-01-01
 
 ### Improvements / Breaking Changes
 - A line is rendered even for the last timeline item to ensure visual consistency.
 - Rounded corners on timeline lines for a smoother appearance.
 - Visual gap between different timeline items with `lineEndGap` in `TimelineProperties`.
+- Fix horizontal overflow issues when using unconstrained widgets such as `Row` or `Text` with long strings.
 
 ## [0.1.1] - 2024-12-02
 

@@ -35,6 +35,7 @@ This fork introduces the following enhancements:
 - A line is rendered even for the last timeline item to ensure visual consistency.
 - Rounded corners on timeline lines for a smoother appearance.
 - Visual gap between different timeline items with `lineEndGap` in `TimelineProperties`.
+- Fix horizontal overflow issues when using unconstrained widgets such as `Row` or `Text` with long strings.
 
 ## Usage
 

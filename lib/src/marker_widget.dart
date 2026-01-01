@@ -62,7 +62,7 @@ class MarkerWidget extends StatelessWidget {
       ];
     } else {
       children = [
-        childWidget(constraints),
+        Expanded(child: childWidget(constraints)),
         SizedBox(width: properties.iconGap),
         iconWidget()
       ];
